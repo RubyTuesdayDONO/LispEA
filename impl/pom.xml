@@ -5,15 +5,12 @@
   <groupId>org.rubydono.LispEA</groupId>
   <artifactId>impl</artifactId>
   <version>0.0.0-SNAPSHOT</version>
-  <!--  <packaging>custom</packaging>
-  -->
   <name>impl</name>
-  <url>http://maven.apache.org</url>
+  <url>http://github.com/RubyTuesdayDONO/LispEA.git</url>
   <packaging>clojure</packaging>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.source.dir>${basedir}/src</project.source.dir>
   </properties>
 
   <dependencies>
@@ -25,54 +22,27 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.11</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
   
   <build>
-    <!--
-	<resources>
-	<resource>
-	<directory>src/main/clojure</directory>
-	</resource>
-	</resources>
-	<testResources>
-	<testResource>
-	<directory>src/test/clojure</directory>
-	</testResource>
-	</testResources>
-    -->
     <plugins>
       <plugin>
 	<groupId>com.theoryinpractise</groupId>
 	<artifactId>clojure-maven-plugin</artifactId>
 	<version>1.3.17</version>
 	<extensions>true</extensions>
-	<configuration>
-	  <testScript>${project.basedir}/src/test/clojure/test.clj</testScript>
-	</configuration>
-	<!--
-	    <executions>
-	    <execution>
-            <id>test-clojure</id>
-            <phase>default-test</phase>
-            <goals>
-	    <goal>test</goal>
-            </goals>
-	    <configuration>
-	    <testScript>${project.basedir}/src/test/clojure/test.clj</testScript>
-	    </configuration>
-	    </execution>
-	    </executions>
-	-->
       </plugin>
     </plugins>
   </build>
+
   <repositories>
     <repository>
       <id>clojure</id>
       <url>http://build.clojure.org/releases</url>
     </repository>
   </repositories>
+
 </project>
